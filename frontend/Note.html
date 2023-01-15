@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <style>
+        body{
+            margin: auto;
+            text-align: center;
+            background-color: rgb(209, 253, 253);
+        }
+        #notepage{
+            width: 100%;
+            display: flex;
+            align-content:space-between;
+            margin: auto;
+            padding: 20px;
+            
+        }
+        #notepage>div{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #box{
+            position: fixed;
+            border: 1px solid silver;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            text-align:start;
+        }
+        #box>div{
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+        }
+        
+        #show{
+            width: 40%;
+        }
+        #show>div{
+            outline: 1px solid silver;
+            border-radius: 10px;
+            font-size:x-large;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin-bottom: 10px;
+        }
+        input{
+            padding: 4% 10%;
+            margin: 2%;
+        }
+        input:focus{
+            outline: none;
+        }
+        #note{
+            padding: 20% 10%;
+        }
+        #note::placeholder{
+            position: relative;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notes</h1>
+    <button><a href="login.html" style="text-decoration: none;">login</a> </button>
+    <button onclick="createNote()">Create Notes</button>
+    <button onclick="show()"> All Notes</button>
+    <div id="notepage">
+        <div id="box"></div>
+        <div id="show"></div>
+    </div>
+
+</body>
+</html>
+<script src="./index.js"></script>
